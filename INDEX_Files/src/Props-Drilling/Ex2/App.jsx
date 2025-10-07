@@ -1,4 +1,4 @@
-import Card from './Components/Card.jsx'
+import Card from './Components/Card'
 
 const App = () => {
 
@@ -43,7 +43,7 @@ const App = () => {
 
 return (
   <div>
-      <div className='mr-7 p-10 w-full items-center inline-block'>
+      <div className='p-10 w-full items-center inline-block'>
         {users.map((elem,idx)=>{
           return <Card key={idx} {...elem}/>
         })}

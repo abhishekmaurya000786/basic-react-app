@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  root: 'INDEX Files',
+  root: 'INDEX_Files/src/Props-Drilling/Ex1',
 })
