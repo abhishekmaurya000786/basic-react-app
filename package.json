@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:Ex1": "cd INDEX_Files/src/Props-Drilling/Examples/Ex1 && npm run dev",
+    
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

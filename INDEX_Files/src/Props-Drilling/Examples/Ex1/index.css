@@ -5,5 +5,5 @@ body{
 }
 
 button{
-  @apply px-5 border-3 rounded-xl border-blue-800;
+  @apply px-5 border-3 rounded-xl border-blue-800; 
 }
