@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:Ex1": "cd INDEX_Files/src/Props-Drilling/Ex1 && npm run dev",
-    "dev:Ex2": "cd INDEX_Files/src/Props-Drilling/Ex2 && npm run dev",
+    "dev:PD-Ex1": "cd INDEX_Files/src/Props-Drilling/Ex1 && npm run dev",
+    "dev:PD-Ex2": "cd INDEX_Files/src/Props-Drilling/Ex2 && npm run dev",
+    "dev:PD-Ex3": "cd INDEX_Files/src/Props-Drilling/Ex3 && npm run dev",
+
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
