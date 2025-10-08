@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body{
-  @apply bg-gray-900 text-black;
+  @apply bg-gray-200 text-black;
 }
 
 button{
