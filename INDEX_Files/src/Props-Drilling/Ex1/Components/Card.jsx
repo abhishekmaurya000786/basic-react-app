@@ -1,6 +1,3 @@
-import React from 'react' 
-
-
 const Card = (props) => {
   return (
     <div className='bg-white text-black inline-block px-3 py-3 text-center rounded mr-7 items-center'>
