@@ -9,5 +9,6 @@ export default defineConfig({
     tailwindcss(),
   ],
   // root: 'INDEX_Files/src/Props-Drilling/Ex1',
-  root: 'INDEX_Files/src/Props-Drilling/Ex2',
+  // root: 'INDEX_Files/src/Props-Drilling/Ex2',
+  root: 'INDEX_Files/src/Props-Drilling/Ex3',
 })
