@@ -1,14 +1,13 @@
-import React from 'react'
+// src/components/Header.jsx
+import React from "react";
 
-const Header = ({ cartCount }) => {
+function Header({ cartCount }) {
   return (
-    <div>
-        <header className='p-10 bg-gray-200 w-full flex justify-between items-center'>
-            <h1>My Shop</h1>
-            <div>Cart Items: {cartCount}</div>
-        </header>
-    </div>
-  )
+    <header style={{ padding: "10px", background: "#eee" }}>
+      <h1>My Shop</h1>
+      <div>Cart Items: {cartCount}</div>
+    </header>
+  );
 }
 
-export default Header
+export default Header;
