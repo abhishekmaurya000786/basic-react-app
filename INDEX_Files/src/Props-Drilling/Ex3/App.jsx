@@ -8,7 +8,7 @@ function App() {
   const [cart, setCart] = useState([]); // cart is an array of { productId, qty, addedAt }
 
   useEffect(() => {
-    fetchProducts().then(setProducts);
+    fetchProducts().then(data => setProducts(data));
   }, []);
 
   // function to add item to cart
