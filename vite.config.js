@@ -10,5 +10,6 @@ export default defineConfig({
   ],
   // root: 'INDEX_Files/src/Props-Drilling/Ex1',
   // root: 'INDEX_Files/src/Props-Drilling/Ex2',
-  root: 'INDEX_Files/src/Props-Drilling/Ex3',
+  // root: 'INDEX_Files/src/Props-Drilling/Ex3',
+  root: 'INDEX_Files/src/Props-Drilling/Ex3_Extended', // Updated to match the new directory structure
 })
