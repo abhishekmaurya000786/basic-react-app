@@ -9,13 +9,13 @@
     "dev:PD-Ex2": "cd INDEX_Files/src/Props-Drilling/Ex2 && npm run dev",
     "dev:PD-Ex3": "cd INDEX_Files/src/Props-Drilling/Ex3 && npm run dev",
     "dev:PD-Ex3_Extended": "cd INDEX_Files/src/Props-Drilling/Ex3 && npm run dev",
-
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
+    "axios": "^1.12.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
