@@ -1,5 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import { fetchProducts } from './API/productApi';
+import Layout from '../Ex3/Components/Layout';
 
 const App = () => {
 
@@ -14,15 +15,25 @@ const App = () => {
         setCart(prev=>{
             const existing = prev.find(item => item.productId===product.id);
             if (existing) {
-              
+              return prev.map(item => item.productId===product.id ? {...item , qty : item.qty + 1} : item);
             } else {
-              
+              return [...prev , {productId : product.id, qty : 1 , addedAt : Date.now()}]
             }
-        })
-    }
+        });
+    };
+
+    const removeFromCart = (productId) => {
+      setCart(prev=> prev.filter(item.productId !==product.id));
+    };
+
   return (
     <div>
-        
+        <Layout 
+          products={products}
+          cart={cart}
+          addToCart={addToCart}
+          removeFromCart={removeFromCart}
+        />
     </div>
   )
 }
