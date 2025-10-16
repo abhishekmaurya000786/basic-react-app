@@ -4,10 +4,22 @@ body {
   @apply bg-gray-100 text-gray-800;
 }
 
-a {
-  @apply text-blue-500 hover:underline;
+#first-input {
+  @apply border border-gray-300 rounded;
 }
 
-#first-input {
-  @apply border border-gray-300 rounded p-4;
+h2{
+  @apply underline text-[40px] font-semibold top-[50vh] left-[50vw] -translate-x-1/2 -translate-y-1/2 transform text-black text-center absolute inline-block;
 }
+
+
+/* h1{
+    position: absolute;
+    text-decoration: underline;
+    font-size: 70px;
+    font-weight: 600;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    color: #fff;
+} */

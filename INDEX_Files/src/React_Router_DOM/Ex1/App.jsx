@@ -9,7 +9,7 @@ import './index.css'
 
 const App = () => {
     return (
-    <div>
+    <div >
         <Header />
         <Routes>
             <Route path="/" element={<Home />} />
