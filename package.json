@@ -10,6 +10,7 @@
     "dev:PD-Ex3": "cd INDEX_Files/src/Props-Drilling/Ex3 && npm run dev",
     "dev:PD-Ex3_Extended": "cd INDEX_Files/src/Props-Drilling/Ex3 && npm run dev",
     "dev:RJ-Ex1": "cd INDEX_Files/src/Rendering_JSON_Data/Ex1 && npm run dev",
+    "dev:RRD-Ex1": "cd INDEX_Files/src/React_Router_DOM/Ex1 && npm run dev",
 
     "build": "vite build",
     "lint": "eslint .",
