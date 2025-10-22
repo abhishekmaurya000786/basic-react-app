@@ -1,11 +1,15 @@
 import React from 'react'
-
-const main = () => {
+import Counter from './Components/Counter'
+const App = () => {
   return (
     <div>
-      
+      <h1>Count is 0.</h1>
+      <Counter />
+      <Counter />
+      <Counter />
+      <Counter />
     </div>
   )
 }
 
-export default main
+export default App
