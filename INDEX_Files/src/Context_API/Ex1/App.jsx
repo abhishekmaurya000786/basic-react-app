@@ -5,10 +5,10 @@ import { CounterContext } from './Context/CounterContext'
 
 const App = () => {
   const counterState = useContext(CounterContext);
-  console.log(counterState);
+  // console.log(counterState);
   return (
     <div>
-      <h1>Count is {counterState}.</h1>
+      <h1>Count is {counterState.count}.</h1>
       <Counter />
       <Counter />
       <Counter />
