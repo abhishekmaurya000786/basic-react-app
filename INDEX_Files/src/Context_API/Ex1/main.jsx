@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { CounterProvider } from './Context/CounterContext';
+import { CounterProvider } from './Context/CounterProvider';
 
 // Render the App component wrapped in CounterProvider to provide context
 // to all components within the application.

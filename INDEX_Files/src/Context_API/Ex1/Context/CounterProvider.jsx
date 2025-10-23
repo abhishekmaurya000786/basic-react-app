@@ -1,7 +1,7 @@
-import {  createContext, useState } from "react";
+import { useState } from "react";
 
 
-export const CounterContext = createContext(null);
+// export const CounterContext = createContext(null);
 
 export const CounterProvider = ({ children }) =>{
     const [count, setCount] = useState(0);

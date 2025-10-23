@@ -1,7 +1,7 @@
 import React from 'react'
 import Counter from './Components/Counter'
 import { useContext } from 'react'
-import { CounterContext } from './Context/CounterContext'
+import { CounterContext } from './Context/CounterProvider'
 
 const App = () => {
   const counterState = useContext(CounterContext);
