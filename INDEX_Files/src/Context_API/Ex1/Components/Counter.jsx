@@ -4,9 +4,9 @@ import { CounterContext } from '../Context/CounterProvider'
 const Counter = () => {
   const {count, setCount} = useContext(CounterContext);
   return (
-    <div className='App gap-3 flex flex-col items-center justify-center'>
-        <button onClick={() => setCount(count + 1)} className='m-10 p-5 rounded-r-3xl'>Increment</button>
-        <button onClick={() => setCount(count - 1)} className='m-10 p-5 rounded-r-3xl'>Decrement</button>
+    <div className='App flex items-center justify-center'>
+        <button onClick={() => setCount(count + 1)} className='border-2 m-5 p-5 rounded-3xl'>Increment</button>
+        <button onClick={() => setCount(count - 1)} className='border-2 m-5 p-5 rounded-3xl'>Decrement</button>
     </div>
   )
 }
