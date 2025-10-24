@@ -6,7 +6,7 @@ const Cart = () => {
     const {cartItems} = useContext(CartContext);
   return (
     <div className="cart">
-      <li>Name : {cartItems.map(item => <l>{item.name}</l>)} </li>
+      {cartItems.length > 0 ? cartItems.map((item, idx) => <li key={idx}>{item.name} - {item.price}</li>) : <p>No items in cart</p>}
 
       <h5>Total Bill : ${cartItems.reduce((total, item) => total + item.price, 0)}</h5>
     </div>
