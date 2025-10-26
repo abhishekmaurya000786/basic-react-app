@@ -7,7 +7,8 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
 
   useEffect(() => {
-    document.querySelector("body").classList.toggle("dark", theme === "dark");
+    // document.querySelector("body").classList.toggle("dark", theme === "dark");
+    document.documentElement.classList.toggle("dark", theme === "dark"); // Both the lines give same result.. It does not mean they are same.!
     localStorage.setItem("theme", theme);
   }, [theme]);
 

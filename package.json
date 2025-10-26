@@ -15,7 +15,7 @@
     "dev:CA-Ex2": "cd INDEX_Files/src/Context_API/Ex2 && npm run dev",
     "dev:CA-Ex3": "cd INDEX_Files/src/Context_API/Ex3 && npm run dev",
 
-    "dev:CA-Ex3": "cd INDEX_Files/src/Context_API/Ex4 && npm run dev",
+    "dev:CA-Ex4": "cd INDEX_Files/src/Context_API/Ex4 && npm run dev",
 
     
     "build": "vite build",
