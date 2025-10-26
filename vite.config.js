@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss(),
+    tailwindcss(), 
   ],
   // root: 'INDEX_Files/src/Props-Drilling/Ex1',
   // root: 'INDEX_Files/src/Props-Drilling/Ex2',
