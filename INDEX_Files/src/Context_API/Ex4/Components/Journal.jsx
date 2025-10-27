@@ -22,7 +22,7 @@ const Journal = () => {
     >
       <h2 className="mb-4 text-xl font-bold">📝 Your Journal</h2>
       <textarea
-        className="w-full p-3 text-black border rounded-lg"
+        className="w-full p-3 text-black border rounded-lg dark:text-gray-400"
         rows="5"
         value={entry}
         onChange={(e) => setEntry(e.target.value)}

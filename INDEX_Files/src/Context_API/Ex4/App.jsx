@@ -8,7 +8,7 @@ const App = () => {
   const { darkMode, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-6 transition-all duration-500 bg-gray-100 dark:bg-gray-950">
+    <div className="flex flex-col items-center justify-center min-h-screen gap-6 transition-all duration-500 bg-gray-100 min-w-screen dark:bg-gray-950">
       <button
         onClick={toggleTheme}
         className="px-4 py-2 text-white bg-blue-500 hover:bg-blue-600 rounded-xl"
