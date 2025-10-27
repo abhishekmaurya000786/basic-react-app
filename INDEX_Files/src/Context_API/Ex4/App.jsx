@@ -1,36 +1,32 @@
-import {useContext} from 'react';
-import {ThemeContext} from './Context/ThemeContext';
-import Journal from './Components/Journal';
-import Notification from './Components/Notification';
-import QuoteBox from './Components/QuoteBox'
-
+import { useContext } from "react";
+import { ThemeContext } from "./Context/ThemeContext";
+import Journal from "./Components/Journal";
+import QuoteBox from "./Components/QuoteBox";
+import Notification from "./Components/Notification";
 
 const App = () => {
-
-  const {darkMode,toggleTheme} = useContext(ThemeContext);
+  const { darkMode, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <div className='min-h-screen min-w-screen flex flex-col items-center justify-center gap-6 bg-gray-100 dark:bg-gray-950 transition-all duration-500'>
-      <button 
+    <div className="flex flex-col items-center justify-center min-h-screen gap-6 transition-all duration-500 bg-gray-100 dark:bg-gray-950">
+      <button
         onClick={toggleTheme}
-        className='bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-xl'
+        className="px-4 py-2 text-white bg-blue-500 hover:bg-blue-600 rounded-xl"
       >
-        Toggle {darkMode ? "Light":"Dark"} mode.
+        Toggle {darkMode ? "Light" : "Dark"} Mode
       </button>
+
       <Notification />
       <QuoteBox />
       <Journal />
-      {darkMode && (
-      <p className="animate-pulse text-blue-300">
-        🌙 Reflect deeply — even darkness has meaning.
-      </p>
-)}
 
-      <footer className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
-         Copyright @2025...!!!
+      <footer className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+        Made with 💙 + ☕ by ChatGPT
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
+
+

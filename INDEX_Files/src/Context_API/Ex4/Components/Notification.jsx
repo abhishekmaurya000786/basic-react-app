@@ -1,22 +1,21 @@
 import { useEffect } from "react";
 
-const Notification = ()=>{
+const Notification = () => {
+  useEffect(() => {
+    document.cookie = "visited=true; max-age=3600; path=/";
+    console.log("Cookie set ✅");
 
-    useEffect(() => {
-        document.cookie = "visited=true; max-age=3600 path/";
-        console.log("Cookie Set ✅");
+    return () => {
+      document.cookie =
+        "visited=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    };
+  }, []);
 
-        return ()=> {
-            document.cookie = "visited=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-        };
-    
-    }, [])
-
-    return (
-        <div>
-            <p className="bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300 rounded-lg text-center">We use Cookies for smooth journaling experience.</p>
-        </div>
-    )
+  return (
+    <div className="p-3 text-center text-yellow-700 bg-yellow-100 rounded-lg dark:bg-yellow-900 dark:text-yellow-300">
+      🍪 We use cookies for a smoother journaling experience.
+    </div>
+  );
 };
 
 export default Notification;
