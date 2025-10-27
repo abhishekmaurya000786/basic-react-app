@@ -6,7 +6,9 @@ const Notification = ()=>{
         document.cookie = "visited=true; max-age=3600 path/";
         console.log("Cookie Set ✅");
 
-        return document.cookie = "visited=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
+        return ()=> {
+            document.cookie = "visited=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        };
     
     }, [])
 

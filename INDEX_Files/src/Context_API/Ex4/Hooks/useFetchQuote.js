@@ -8,10 +8,18 @@ export const useFetchQuote = ()=>{
     useEffect(() => {
         const fetchQuote = async () => {
             try{
-                const res = await fetch("https://api.quotable.io/random");
+                const apiUrl = "https://zenquotes.io/api/random";
+                // const apiUrl = "https://api.quotable.io/random"
+                
+                const res = await fetch(`https://api.allorigins.win/raw?url=${encodeURI(apiUrl)}`);
+
+                // const res = await fetch(`https://api.allorigins.win/raw?url=${encodeURI(apiUrl)}`);
+
                 if(!res.ok) throw new Error("Failed to fetch quote"); //
                 const data = await res.json();
-                setQuote(`${data.content} — ${data.author}`);
+
+                setQuote(`${data[0].a} - ${data[0].q}`);
+
             } catch (err) {
                 setError(err.message);
             } finally {

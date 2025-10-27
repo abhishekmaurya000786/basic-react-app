@@ -4,11 +4,11 @@ import { ThemeProvider } from './Context/ThemeContext';
 import App from "./App";
 import './index.css';
 
-ReactDOM.createRoot(document.querySelector("#root").render(    
-    <StrictMode>
-        <ThemeProvider>
+ReactDOM.createRoot(document.querySelector("#root")).render(    
+    <ThemeProvider>
+        <StrictMode>
             <App />
-        </ThemeProvider>
-    </StrictMode>
+        </StrictMode>
+    </ThemeProvider>
     
-));
+);

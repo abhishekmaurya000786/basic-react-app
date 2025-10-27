@@ -3,14 +3,14 @@ import {ThemeContext} from './Context/ThemeContext';
 import Journal from './Components/Journal';
 import Notification from './Components/Notification';
 import QuoteBox from './Components/QuoteBox'
-import './index.css'
+
 
 const App = () => {
 
   const {darkMode,toggleTheme} = useContext(ThemeContext);
 
   return (
-    <div className='min-h-screen flex flex-col items-center justify-center gap-6 bg-gray-100 dark:bg-gray-950 transition-all duration-500'>
+    <div className='min-h-screen min-w-screen flex flex-col items-center justify-center gap-6 bg-gray-100 dark:bg-gray-950 transition-all duration-500'>
       <button 
         onClick={toggleTheme}
         className='bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-xl'
