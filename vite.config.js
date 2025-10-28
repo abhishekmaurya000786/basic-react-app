@@ -36,7 +36,7 @@ export default defineConfig({
   // root: 'INDEX_Files/src/Context_API/Ex1',
   // root: 'INDEX_Files/src/Context_API/Ex2',
   // root: 'INDEX_Files/src/Context_API/Ex3',
-  root: 'INDEX_Files/src/Context_API/Ex4',
+  // root: 'INDEX_Files/src/Context_API/Ex4',
   // root: 'INDEX_Files/src/Context_API/Ex5',
 
 
