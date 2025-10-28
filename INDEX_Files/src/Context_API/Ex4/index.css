@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *))
 
-body{
+/* body{
     @apply min-h-screen flex items-center justify-center;
-}
+} */

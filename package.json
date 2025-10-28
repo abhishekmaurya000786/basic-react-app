@@ -16,8 +16,6 @@
     "dev:CA-Ex3": "cd INDEX_Files/src/Context_API/Ex3 && npm run dev",
     "dev:CA-Ex4": "cd INDEX_Files/src/Context_API/Ex4 && npm run dev",
     "dev:CA-Ex5": "cd INDEX_Files/src/Context_API/Ex5 && npm run dev",
-
-
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -25,6 +23,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
     "axios": "^1.12.2",
+    "lucide-react": "^0.548.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.9.4"
