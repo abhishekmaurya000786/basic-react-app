@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Product from './pages/Product'
 import Items from './pages/Items'
+import Kids from './pages/Kids'
 
 const App = () => {
   return (
@@ -14,8 +15,11 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/product' element={<Product />} />
-        <Route path='/product/items' element={<Items />} />
+        <Route path='/product' element={<Product />} >
+          <Route path='items' element={<Items />} />
+          <Route path='kids' element={<Kids />} />
+        </Route>
+        
       </Routes>
       <Footer />
     </div>
