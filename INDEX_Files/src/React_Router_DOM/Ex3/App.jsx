@@ -7,6 +7,11 @@ import About from './pages/About'
 import Product from './pages/Product'
 import Items from './pages/Items'
 import Kids from './pages/Kids'
+import Popcorn from './pages/Popcorn'
+import NotFound from './pages/NotFound'
+import Mango from './pages/Mango'
+import Men from './pages/Men'
+import Women from './pages/Women'
 
 const App = () => {
   return (
@@ -16,9 +21,17 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/product' element={<Product />} >
-          <Route path='items' element={<Items />} />
+          <Route path='adult'>
+            <Route path='men' element={<Men />} />
+            <Route path='women' element={<Women />} />        
+          </Route>
+          <Route path='popcorn' element={<Popcorn />} />
           <Route path='kids' element={<Kids />} />
         </Route>
+
+        <Route path='/product/items/mango' element={<Mango />} />
+
+        <Route path='*' element={<NotFound />} />
         
       </Routes>
       <Footer />

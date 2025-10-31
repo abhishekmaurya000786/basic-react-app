@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Kids = () => {
   return (
@@ -8,4 +9,4 @@ const Kids = () => {
   )
 }
 
-export default Kids
+export default Kids;
