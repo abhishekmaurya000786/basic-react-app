@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Product from './pages/Product'
-import Items from './pages/Items'
+import Adult from './pages/Adult'
 import Kids from './pages/Kids'
 import Popcorn from './pages/Popcorn'
 import NotFound from './pages/NotFound'
@@ -21,15 +21,21 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/product' element={<Product />} >
-          <Route path='adult'>
+
+          <Route path='adult' element={<Adult />}>
             <Route path='men' element={<Men />} />
             <Route path='women' element={<Women />} />        
           </Route>
+
+          <Route path='items' >
+            <Route path='mango' element={<Mango />} />
+          </Route>
+
           <Route path='popcorn' element={<Popcorn />} />
           <Route path='kids' element={<Kids />} />
         </Route>
 
-        <Route path='/product/items/mango' element={<Mango />} />
+        {/* <Route path='/product/items/mango' element={<Mango />} /> */}
 
         <Route path='*' element={<NotFound />} />
         

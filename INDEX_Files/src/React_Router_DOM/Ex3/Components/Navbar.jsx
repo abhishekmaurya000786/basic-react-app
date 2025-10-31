@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -9,11 +9,12 @@ const Navbar = () => {
         <Link className='text-lg font-bold' to="/">Home</Link>
         <Link className='text-lg font-bold' to="/about">About</Link>
         <Link className='text-lg font-bold' to="/product">Products</Link>
-        <Link className='text-lg font-bold' to="/product/items">Items</Link>
+        {/* <Link className='text-lg font-bold' to="/product/items">Items</Link> */}
         <Link className='text-lg font-bold' to="/product/kids">Kids Page</Link>
         <Link className='text-lg font-bold' to="/product/popcorn">Popcorn PAGE</Link>
-
+        
       </div>
+      <Outlet />
     </div>
   )
 }
