@@ -24,7 +24,7 @@ const App = () => {
 
           <Route path='adult' element={<Adult />}>
             <Route path='men' element={<Men />} />
-            <Route path='women' element={<Women />} />        
+                   
           </Route>
 
           <Route path='mango' element={<Mango />} />
@@ -33,7 +33,8 @@ const App = () => {
           <Route path='popcorn' element={<Popcorn />} />
           <Route path='kids' element={<Kids />} />
         </Route>
-
+        <Route path='men' element={<Men />} />
+        <Route path='women' element={<Women />} /> 
         {/* <Route path='/product/items/mango' element={<Mango />} /> */}
 
         <Route path='*' element={<NotFound />} />
