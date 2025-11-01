@@ -3,7 +3,7 @@ import React from 'react'
 const Popcorn = () => {
   return (
     <div>
-       <h1>Popcorn Kha Lo : {`)`}</h1>
+       <h3>Popcorn Kha Lo : {`)`}</h3>
     </div>
   )
 }

@@ -11,4 +11,10 @@ h1{
     transform: translate(-50%,-50%);
     text-decoration: underline;
     font-weight: 400;
+
+    /* @apply border-amber-300 border-4 m-4 p-4 rounded-2xl min-h-12 min-w-48; */
+}
+
+h2{
+    @apply flex items-center justify-center font-semibold ;
 }

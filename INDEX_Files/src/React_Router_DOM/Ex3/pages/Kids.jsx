@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Kids = () => {
   return (
     <div>
-      <h1>You are in Kid's Section.</h1>
+      <h2>You are in Kid's Section.</h2>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import React from 'react'
 const Women = () => {
   return (
     <div>
-      <h1>Naari Shakti..</h1>
+      <h2>Naari Shakti..</h2>
     </div>
   )
 }
