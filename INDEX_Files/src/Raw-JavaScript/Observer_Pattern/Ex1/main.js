@@ -22,6 +22,7 @@ class User {
     }
 
     update(data){
+        
         console.log(`${this.name} :: ${data}`);
     }
 }
