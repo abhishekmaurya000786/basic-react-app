@@ -1,17 +1,17 @@
 function debounce(fnc,delay){
     let timer;
-    return function (...args){
+    return function (){
         clearTimeout(timer);
         setTimeout(() => {
-            fnc(...args)
+            fnc();
+            // fnc();
         }, delay);
+        // setChar(e.target.value);
     }
 }
 
-function printFunction(name){
-    console.log("Hello",name);
+function printFunction(value){
+    console.log("Hello",value);
 }
-
-// document.querySelector("input").addEventListener("input", ()=>debounce(printFunction("Abhishek"),1000));
 
 export { debounce,printFunction};

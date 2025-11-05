@@ -1,11 +1,20 @@
-import React from "react";
-import { debounce,printFunction } from "./index";
+import React, { useState, useCallback } from "react";
+import { debounce, printFunction } from "./index";
 
 export default function App() {
-  document.querySelector("input").addEventListener("input", ()=>debounce(printFunction("Abhishek"),1000));
+
+  const [text, setText] = useState("");
+
+  const debouncedInput = useCallback(debounce(() => printFunction("Abhi"), 1000),[]);
+  
+  const handleChange = (e)=>{
+    const value = e.target.value;
+    setText(value);
+  }
+
   return (
     <div className="min-h-screen flex justify-center items-center">
-      <input type="text" />
+      <input type="text" onChange={handleChange} value={text} placeholder="Enter anything..." />
     </div>
   );
 }
