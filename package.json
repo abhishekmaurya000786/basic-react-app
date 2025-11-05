@@ -20,6 +20,7 @@
     "dev:CA-Ex5": "cd INDEX_Files/src/Context_API/Ex5 && npm run dev",
     "dev:OP-Ex1": "cd INDEX_Files/src/Raw-JavaScript/Observer_Pattern/Ex1 && npm run dev",
     "dev:OP-Ex2": "cd INDEX_Files/src/Raw-JavaScript/Observer_Pattern/Ex2 && npm run dev",
+    "dev:DB-Ex1": "cd INDEX_Files/src/Raw-JavaScript/Debouncing/Ex1 && npm run dev",
 
     
     "build": "vite build",
