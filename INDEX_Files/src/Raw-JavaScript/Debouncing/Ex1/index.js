@@ -1,17 +1,8 @@
-function debounce(fnc,delay){
-    let timer;
-    return function (){
-        clearTimeout(timer);
-        setTimeout(() => {
-            fnc();
-            // fnc();
-        }, delay);
-        // setChar(e.target.value);
-    }
+// utils.js
+export function debounce(func, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer); // clear previous timer
+    timer = setTimeout(() => func(...args), delay); // run after delay
+  };
 }
-
-function printFunction(value){
-    console.log("Hello",value);
-}
-
-export { debounce,printFunction};
