@@ -42,7 +42,8 @@ export default defineConfig({
   // root: 'INDEX_Files/src/Context_API/Ex5',
   //  root: 'INDEX_Files/src/Raw-JavaScript/Observer_Pattern/Ex1',
   //  root: 'INDEX_Files/src/Raw-JavaScript/Observer_Pattern/Ex2',
-  root: 'INDEX_Files/src/Raw-JavaScript/Debouncing/Ex1',
+  // root: 'INDEX_Files/src/Raw-JavaScript/Debouncing/Ex1',
+  root: 'INDEX_Files/src/Raw-JavaScript/Throttling/Ex1',
 
 
 })

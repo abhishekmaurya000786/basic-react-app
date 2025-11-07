@@ -1,8 +1,13 @@
-export function throttling(...args) {
-    let now;
+export function throttling(fnc,delay) {
+    let timer;
 
-    return function {
-        
-    }
+    return function(...args) {
+        let now = Date.now();
+        if (now - timer >=delay){
+            timer=now;
+            fnc(...args);
+        }
+
+    };
     
 }
