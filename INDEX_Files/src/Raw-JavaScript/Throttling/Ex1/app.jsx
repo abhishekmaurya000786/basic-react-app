@@ -1,6 +1,6 @@
 import { throttling } from './index'
-function printFunction(){
-    console.log("Hello, ");
+function printFunction(name){
+    console.log("Hello, ", name);
 }
 const App = () => {
     let throttlePrint = throttling(printFunction,1000);
