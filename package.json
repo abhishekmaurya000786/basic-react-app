@@ -24,6 +24,7 @@
     "dev:TH-Ex1": "cd INDEX_Files/src/Raw-JavaScript/Throttling/Ex1 && npm run dev",
     "dev:IO-Ex1": "cd INDEX_Files/src/Raw-JavaScript/IntersectionObserver/Ex1 && npm run dev",
     "dev:CS-Ex1": "cd INDEX_Files/src/Raw-JavaScript/CodeSplitting/Ex1 && npm run dev",
+    "dev:CS-Ex2": "cd INDEX_Files/src/Raw-JavaScript/CodeSplitting/Ex2 && npm run dev",
 
     
     "build": "vite build",
