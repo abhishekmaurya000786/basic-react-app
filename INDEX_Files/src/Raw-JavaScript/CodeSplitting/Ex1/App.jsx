@@ -1,12 +1,11 @@
 import React, {Suspense, lazy} from 'react';
-import './index.css'
+import './index.css';
 
-const About = lazy(()=> import("./Components/About"))
-
+const About = lazy(()=> import("./Components/About.jsx")); // lazy loading the About component
 
 const App = () => {
   return (
-    <div>
+    <div className='m-4 p-4 '>
       <h1>Welcome Home</h1>
       <Suspense fallback={<p>Loading..</p>}>
         <About />      {/* it loads only when rendered*/}
@@ -14,5 +13,4 @@ const App = () => {
     </div>
   )
 }
-
-export default App
+export default App;
