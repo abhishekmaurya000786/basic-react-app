@@ -44,7 +44,8 @@ export default defineConfig({
   //  root: 'INDEX_Files/src/Raw-JavaScript/Observer_Pattern/Ex2',
   // root: 'INDEX_Files/src/Raw-JavaScript/Debouncing/Ex1',
   // root: 'INDEX_Files/src/Raw-JavaScript/Throttling/Ex1',
-  root: 'INDEX_Files/src/Raw-JavaScript/IntersectionObserver/Ex1',
+  // root: 'INDEX_Files/src/Raw-JavaScript/IntersectionObserver/Ex1',
+  root: 'INDEX_Files/src/Raw-JavaScript/CodeSpiltting/Ex1',
 
 
 })
