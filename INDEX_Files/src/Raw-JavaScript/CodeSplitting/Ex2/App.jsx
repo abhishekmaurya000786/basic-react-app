@@ -1,23 +1,25 @@
-import React from 'react';
-import './index.css';
-
-
+import React from "react";
+import "./index.css";
 
 const App = () => {
-
-  // const btn = document.querySelector("button");
-
-  async function loadHeavyFunction(){
-    let heavy = await import('./heavy.js');
-    console.log(heavy);
+  async function loadHeavyFunction() {
+    let heavy = await import("./heavy.js");
+    heavy.veryHeavy();
   }
 
   return (
     <div>
-      <h1>Code Splitting with Dynamic import.</h1>
-      <button onClick={loadHeavyFunction} >Click to Load Heavy Module.</button>
+      <h1 className="m-4 p-4 text-4xl text-center">
+        Code Splitting with Dynamic import.
+      </h1>
+      <button
+        onClick={loadHeavyFunction}
+        className="border-4 border-blue-500 rounded-2xl m-4 p-4"
+      >
+        Click to Load Heavy Module.
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
