@@ -1,5 +1,3 @@
-// heavy.js
-
 export function veryHeavy() {
   console.log("🧠 Giant feature added ..!");
   alert("Heavy feature loading completed!");
