@@ -26,8 +26,6 @@
     "dev:CS-Ex1": "cd INDEX_Files/src/Raw-JavaScript/CodeSplitting/Ex1 && npm run dev",
     "dev:CS-Ex2": "cd INDEX_Files/src/Raw-JavaScript/CodeSplitting/Ex2 && npm run dev",
     "dev:CS-Ex3": "cd INDEX_Files/src/Raw-JavaScript/CodeSplitting/Ex3 && npm run dev",
-
-    
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -38,6 +36,7 @@
     "lucide-react": "^0.548.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-icons": "^5.5.0",
     "react-router-dom": "^7.9.4"
   },
   "devDependencies": {
