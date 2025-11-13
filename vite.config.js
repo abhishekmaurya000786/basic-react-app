@@ -47,7 +47,9 @@ export default defineConfig({
   // root: 'INDEX_Files/src/Raw-JavaScript/IntersectionObserver/Ex1',
   // root: 'INDEX_Files/src/Raw-JavaScript/CodeSplitting/Ex1',
   // root: 'INDEX_Files/src/Raw-JavaScript/CodeSplitting/Ex2',
-  root: 'INDEX_Files/src/Raw-JavaScript/CodeSplitting/Ex3',
+  // root: 'INDEX_Files/src/Raw-JavaScript/CodeSplitting/Ex3',
+  // root: 'INDEX_Files/src/Raw-JavaScript/CodeSplitting/Ex4',
+  root: 'INDEX_Files/src/Raw-JavaScript/CodeSplitting/Ex5',
 
 
 })

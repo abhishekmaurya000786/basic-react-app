@@ -26,6 +26,8 @@
     "dev:CS-Ex1": "cd INDEX_Files/src/Raw-JavaScript/CodeSplitting/Ex1 && npm run dev",
     "dev:CS-Ex2": "cd INDEX_Files/src/Raw-JavaScript/CodeSplitting/Ex2 && npm run dev",
     "dev:CS-Ex3": "cd INDEX_Files/src/Raw-JavaScript/CodeSplitting/Ex3 && npm run dev",
+    "dev:CS-Ex4": "cd INDEX_Files/src/Raw-JavaScript/CodeSplitting/Ex4 && npm run dev",
+    "dev:CS-Ex5": "cd INDEX_Files/src/Raw-JavaScript/CodeSplitting/Ex5 && npm run dev",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
