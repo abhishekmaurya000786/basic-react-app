@@ -4,8 +4,6 @@ import { store } from './store';
 import Cart from './components/Cart';
 import Products from './components/Products';
 import ThemeToggle from './components/ThemeToggle';
-
-
 const App = () => {
 return (
 <Provider store={store}>
@@ -17,6 +15,4 @@ return (
 </Provider>
 );
 };
-
-
 export default App;
