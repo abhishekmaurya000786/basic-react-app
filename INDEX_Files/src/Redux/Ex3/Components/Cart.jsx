@@ -1,11 +1,9 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeItem, clearCart } from "../slices/cartSlice";
-
 const Cart = () => {
   const { items, total } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-
   return (
     <div className="mt-6">
       <h2 className="text-xl font-bold">Cart</h2>

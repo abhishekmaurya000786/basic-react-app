@@ -1,13 +1,11 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { addItem } from "../slices/cartSlice";
-
 const products = [
   { id: 1, name: "Laptop", price: 700 },
   { id: 2, name: "Keyboard", price: 50 },
   { id: 3, name: "Mouse", price: 30 },
 ];
-
 const Products = () => {
   const dispatch = useDispatch();
 
@@ -30,5 +28,4 @@ const Products = () => {
     </div>
   );
 };
-
 export default Products;

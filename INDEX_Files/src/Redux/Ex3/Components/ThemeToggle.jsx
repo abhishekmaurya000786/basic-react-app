@@ -5,7 +5,6 @@ import { toggleTheme } from "../slices/themeSlice";
 const ThemeToggle = () => {
   const { mode } = useSelector((state) => state.theme);
   const dispatch = useDispatch();
-
   return (
     <button
       onClick={() => dispatch(toggleTheme())}
@@ -15,5 +14,4 @@ const ThemeToggle = () => {
     </button>
   );
 };
-
 export default ThemeToggle;
