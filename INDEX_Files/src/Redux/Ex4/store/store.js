@@ -1,10 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
-import cartReducer from "./slices/cartSlice";
-import themeReducer from "./slices/themeSlice";
+// redux/store.js
+import { configureStore } from '@reduxjs/toolkit';
+import counterReducer from './counter/counterSlice';   // importing reducer
 
+// Creating the central store (CASE-SENSITIVE imports)
 export const store = configureStore({
   reducer: {
-    cart: cartReducer,
-    theme: themeReducer,
+    counter: counterReducer,   // registering slice reducer
   },
 });
