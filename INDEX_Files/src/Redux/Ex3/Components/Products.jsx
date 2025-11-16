@@ -8,7 +8,6 @@ const products = [
 ];
 const Products = () => {
   const dispatch = useDispatch();
-
   return (
     <div>
       <h2 className="text-xl font-bold">Products</h2>
