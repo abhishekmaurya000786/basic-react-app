@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { increment, decrement, incrementByAmount } from "../redux/counter/counterSlice";
+import { increment, decrement, incrementByAmount } from "../slices/counterSlice";
 
 export default function CounterButtons() {
   const dispatch = useDispatch();
