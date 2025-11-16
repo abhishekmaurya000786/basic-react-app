@@ -53,7 +53,8 @@ export default defineConfig({
 
   // root: 'INDEX_Files/src/Raw-JavaScript/Redux/Ex1',
   // root: 'INDEX_Files/src/Raw-JavaScript/Redux/Ex2',
-  root: 'INDEX_Files/src/Raw-JavaScript/Redux/Ex3',
+  // root: 'INDEX_Files/src/Raw-JavaScript/Redux/Ex3',
+  root: 'INDEX_Files/src/Raw-JavaScript/Redux/Ex4',
 
 
 
