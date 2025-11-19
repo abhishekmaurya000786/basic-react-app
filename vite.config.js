@@ -51,10 +51,11 @@ export default defineConfig({
   // root: 'INDEX_Files/src/Raw-JavaScript/CodeSplitting/Ex4',
   // root: 'INDEX_Files/src/Raw-JavaScript/CodeSplitting/Ex5',
 
-  // root: 'INDEX_Files/src/Raw-JavaScript/Redux/Ex1',
-  // root: 'INDEX_Files/src/Raw-JavaScript/Redux/Ex2',
-  // root: 'INDEX_Files/src/Raw-JavaScript/Redux/Ex3',
-  root: 'INDEX_Files/src/Raw-JavaScript/Redux/Ex4',
+  // root: 'INDEX_Files/src/Redux/Ex1',
+  // root: 'INDEX_Files/src/Redux/Ex2',
+  // root: 'INDEX_Files/src/Redux/Ex3',
+  // root: 'INDEX_Files/src/Redux/Ex4',
+  root: 'INDEX_Files/src/Redux/Ex5',
 
 
 
