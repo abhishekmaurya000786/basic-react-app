@@ -17,10 +17,13 @@ const App = () => {
   };
 
   return (
-    <div>
-      <button onClick={handleIncrement}>+</button>
-      <h1>Count : ${count}</h1>
-      <button onClick={handleDecrement}>-</button>
+    <div className='flex flex-col items-center justify-center'>
+      <button 
+        onClick={handleIncrement}
+        className='btn'
+      >+</button>
+      <h1 className='text-white'>Count : ${count}</h1>
+      <button onClick={handleDecrement} className='btn'>-</button>
     </div>
   )
 }

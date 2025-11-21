@@ -1,0 +1,6 @@
+@imprt "tailwindcss";
+
+#root{
+    @apply text-white;
+}
+
