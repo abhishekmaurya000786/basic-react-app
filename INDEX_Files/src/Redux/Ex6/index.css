@@ -4,3 +4,12 @@ body{
     @apply bg-gray-900 text-white;
 }
 
+.btn{
+    @apply border border-amber-300 
+           flex  items-center justify-center 
+           min-w-8 h-8
+           px-3 rounded-xl 
+           hover:bg-amber-300 hover:text-black 
+           transition-all duration-200
+           cursor-pointer select-none;
+}
