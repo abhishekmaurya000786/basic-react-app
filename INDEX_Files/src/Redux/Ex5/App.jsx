@@ -5,8 +5,8 @@ import {increment,decrement,reset,incrementByAmount} from "./Features/Counter/co
 
 const App = () => {
   const [amount, setAmount] = useState(0);
-
   const count = useSelector((state) => state.counter.value);
+  
   const dispatch = useDispatch();
 
   console.log("Count : ",count);
