@@ -7,7 +7,12 @@ const ThemeButton = () => {
   const dispatch = useDispatch();
   return (
     <div>
-      <button onClick={() => dispatch(toggleTheme())}>Change Theme</button>
+      <button
+        onClick={() => dispatch(toggleTheme())}
+        className={`btn fixed top-4 right-4 z-50 ${theme === "dark" ? "btn-dark" : "btn-light"} dark:bg-black dark:text-white bg-white text-black`}
+      >
+        Change Theme
+      </button>
     </div>
   );
 };
