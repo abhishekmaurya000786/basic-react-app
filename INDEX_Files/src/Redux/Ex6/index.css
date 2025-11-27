@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 body{
-    @apply bg-gray-900 text-white;
+    @apply transition-colors duration-300;
 }
+
 
 .btn{
     @apply border border-amber-300 

@@ -9,9 +9,8 @@ export const themeSlice = createSlice({
     toggleTheme: (state) => {
       state.theme = state.theme === "light" ? "dark" : "light";
       document.documentElement.classList.toggle("dark", state.theme === "dark");
-      // document.documentElement.classList.toggle("light", state.theme === "light");
-
       localStorage.setItem("theme", state.theme);
+      // console.log(state.theme);
     },
   },
 });
