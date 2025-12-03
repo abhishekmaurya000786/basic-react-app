@@ -25,8 +25,6 @@ export default defineConfig({
     tailwindcss(),
   ],
 
-
-
   // root: 'INDEX_Files/src/Props-Drilling/Ex1',
   // root: 'INDEX_Files/src/Props-Drilling/Ex2',
   // root: 'INDEX_Files/src/Props-Drilling/Ex3',
@@ -40,8 +38,8 @@ export default defineConfig({
   // root: 'INDEX_Files/src/Context_API/Ex3',
   // root: 'INDEX_Files/src/Context_API/Ex4',
   // root: 'INDEX_Files/src/Context_API/Ex5',
-  //  root: 'INDEX_Files/src/Raw-JavaScript/Observer_Pattern/Ex1',
-  //  root: 'INDEX_Files/src/Raw-JavaScript/Observer_Pattern/Ex2',
+  // root: 'INDEX_Files/src/Raw-JavaScript/Observer_Pattern/Ex1',
+  // root: 'INDEX_Files/src/Raw-JavaScript/Observer_Pattern/Ex2',
   // root: 'INDEX_Files/src/Raw-JavaScript/Debouncing/Ex1',
   // root: 'INDEX_Files/src/Raw-JavaScript/Throttling/Ex1',
   // root: 'INDEX_Files/src/Raw-JavaScript/IntersectionObserver/Ex1',
@@ -56,7 +54,8 @@ export default defineConfig({
   // root: 'INDEX_Files/src/Redux/Ex3',
   // root: 'INDEX_Files/src/Redux/Ex4',
   // root: 'INDEX_Files/src/Redux/Ex5',
-  root: 'INDEX_Files/src/Redux/Ex6',
+  // root: 'INDEX_Files/src/Redux/Ex6',
+  root: 'INDEX_Files/src/Redux/Ex7',
 
 
 
