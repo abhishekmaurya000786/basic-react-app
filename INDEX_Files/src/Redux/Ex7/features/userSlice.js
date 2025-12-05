@@ -1,4 +1,9 @@
-import { createSlice, createAsyncThunk, isFulfilled, isRejected } from "@reduxjs/toolkit";
+import {
+  createSlice,
+  createAsyncThunk,
+  isFulfilled,
+  isRejected,
+} from "@reduxjs/toolkit";
 import { forceLogout, resetApp } from "../Actions/globalActions";
 
 export const fetchUser = createAsyncThunk("user/fetchUsers", async () => {
@@ -46,11 +51,18 @@ export const productSlice = createSlice({
         state.data = null;
         state.message = "User Logged out by force";
       })
-      .addMatcher(isFulfilled(fetchUser), (state=>{
-        state.message = "User loaded successfully.."
-      }))
-      .addMatcher(isRejected(fetchUser), (state)=>{
-        state.message = "laoding failed..!"
+      .addMatcher(isFulfilled(fetchUser), (state) => {
+        state.message = "User loaded successfully..";
+      })
+      // add matcher actually matches the action type pattern, it consist of 3 functions: isPending, isFulfilled, isRejected
+      .addMatcher(isRejected(fetchUser), (state) => {
+        state.message = "laoding failed..!";
+      })
+      .addDefaultCase((state, action) => { 
+        if (action.type.startsWith("user")) {
+          console.log("Unhandled action inside user Slice ->", action.type);
+        }
+        // add default case is actually a catch all for any action that is not handled above, if any action is dispatched that is not handled above, this function will be called
       });
   },
 });
