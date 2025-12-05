@@ -14,8 +14,8 @@ export const fetchUser = createAsyncThunk("user/fetchUsers", async () => {
   });
 });
 
-export const productSlice = createSlice({
-  name: "products",
+export const userSlice = createSlice({
+  name: "user",
   initialState: {
     data: null,
     status: "idle",
@@ -58,7 +58,7 @@ export const productSlice = createSlice({
       .addMatcher(isRejected(fetchUser), (state) => {
         state.message = "laoding failed..!";
       })
-      .addDefaultCase((state, action) => { 
+      .addDefaultCase((state, action) => {
         if (action.type.startsWith("user")) {
           console.log("Unhandled action inside user Slice ->", action.type);
         }
@@ -66,3 +66,7 @@ export const productSlice = createSlice({
       });
   },
 });
+
+export const {setMessage,clearMessage} = userSlice.actions;
+
+export default userSlice.reducer;
