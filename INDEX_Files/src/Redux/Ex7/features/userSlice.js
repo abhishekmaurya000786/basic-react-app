@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, isFulfilled, isRejected } from "@reduxjs/toolkit";
 import { forceLogout, resetApp } from "../Actions/globalActions";
 
 export const fetchUser = createAsyncThunk("user/fetchUsers", async () => {
@@ -45,6 +45,12 @@ export const productSlice = createSlice({
       .addCase(forceLogout, (state) => {
         state.data = null;
         state.message = "User Logged out by force";
+      })
+      .addMatcher(isFulfilled(fetchUser), (state=>{
+        state.message = "User loaded successfully.."
+      }))
+      .addMatcher(isRejected(fetchUser), (state)=>{
+        state.message = "laoding failed..!"
       });
   },
 });
