@@ -1,7 +1,7 @@
 import { createAction } from "@reduxjs/toolkit";
 
 export const resetApp = createAction("app/reset");
-export const forceLayout = createAction("app/forceLayout");
+export const forceLogout = createAction("app/forceLogout");
 
 
 //    (Multiple other actions that could be defined here)

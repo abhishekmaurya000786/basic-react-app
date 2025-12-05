@@ -1,14 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { forceLogout, resetApp } from "../Actions/globalActions";
 
-export const fetchUser = createAsyncThunk("user/fetchUsers", 
-    async () => {
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                resolve({name:"Jhon", age: 21})
-            }, 1000);
-        });
-    }
-);
+export const fetchUser = createAsyncThunk("user/fetchUsers", async () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ name: "Jhon", age: 21 });
+    }, 1000);
+  });
+});
 
 export const productSlice = createSlice({
   name: "products",
@@ -18,7 +17,7 @@ export const productSlice = createSlice({
     message: "",
   },
   reducers: {
-    setMessage: (state,action) => {
+    setMessage: (state, action) => {
       state.message = action.payload;
     },
 
@@ -28,9 +27,24 @@ export const productSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-    .addCase(fetchUser.pending, (state)=>{
+      .addCase(fetchUser.pending, (state) => {
         state.status = "loading";
-    })
-    .addCase(fetchUser.fulfilled, reducer);
+      })
+      .addCase(fetchUser.fulfilled, (state, action) => {
+        state.status = "success";
+        state.data = action.payload;
+      })
+      .addCase(fetchUser.rejected, (state) => {
+        state.status = "error";
+      })
+      .addCase(resetApp, (state) => {
+        state.data = null;
+        state.status = "idle";
+        state.message = "";
+      })
+      .addCase(forceLogout, (state) => {
+        state.data = null;
+        state.message = "User Logged out by force";
+      });
   },
 });
