@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUser, setMessage } from "./features/userSlice";
+import { forceLogout, resetApp } from "./Actions/globalActions";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -14,8 +15,18 @@ const App = () => {
       <button onClick={() => dispatch(setMessage("custom message set."))}>
         Set message.
       </button>
-      <button onClick={() => dispatch()}>Reset App.</button>
-      <button onClick={() => dispatch()}>Force Layout.</button>
+      <button 
+        className="" 
+        onClick={() => dispatch(resetApp())}>
+        Reset App.
+      </button>
+      <button 
+        className="" 
+        onClick={() => dispatch(forceLogout())}>
+        Force Layout.
+      </button>
+
+      <pre>{JSON.stringify({user, settings},null,2)}</pre>
     </div>
   );
 };
