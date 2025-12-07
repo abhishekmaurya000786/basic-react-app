@@ -9,19 +9,21 @@ const App = () => {
   const settings = useSelector((state) => state.settings);
 
   return (
-    <div className="">
+    <div className="p-6 max-w-xl  mx-auto">
       <h1>Redux learning app.</h1>
-      <button onClick={() => dispatch(fetchUser())}>Get user.</button>
-      <button onClick={() => dispatch(setMessage("custom message set."))}>
+      <button
+        className="bg-blue-600 text-white px-4 py-2 rounded mr-2" 
+        onClick={() => dispatch(fetchUser())}>Get user.</button>
+      <button className = "bg-yellow-600 text-white px-4 py-2 rounded mr-2" onClick={() => dispatch(setMessage("custom message set."))}>
         Set message.
       </button>
       <button 
-        className="" 
+        className="bg-gray-600 text-white px-4 py-2 rounded mr-2" 
         onClick={() => dispatch(resetApp())}>
         Reset App.
       </button>
       <button 
-        className="" 
+        className="bg-red-600 text-white px-4 py-2 rounded mr-2" 
         onClick={() => dispatch(forceLogout())}>
         Force Layout.
       </button>
