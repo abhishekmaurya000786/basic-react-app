@@ -55,7 +55,8 @@ export default defineConfig({
   // root: 'INDEX_Files/src/Redux/Ex4',
   // root: 'INDEX_Files/src/Redux/Ex5',
   // root: 'INDEX_Files/src/Redux/Ex6',
-  root: 'INDEX_Files/src/Redux/Ex7',
+  // root: 'INDEX_Files/src/Redux/Ex7',
+  root: 'INDEX_Files/src/Redux/Ex8',
 
 
 
