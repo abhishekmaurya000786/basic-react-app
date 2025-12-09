@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUser, changeName } from './features/userSlice';
 import { increment } from './features/scoreSlice';
-import { resetAll } from '../Actions/globalActions';
+import { resetAll } from './Actions/globalActions';
 
 export default function App() {
   const dispatch = useDispatch();

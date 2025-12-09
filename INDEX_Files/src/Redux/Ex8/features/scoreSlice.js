@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchUser } from '../';
+import { fetchUser } from './userSlice';
 import { resetAll } from '../Actions/globalActions';
 
 const scoreSlice = createSlice({
