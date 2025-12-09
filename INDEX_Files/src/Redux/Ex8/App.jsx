@@ -1,36 +1,52 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchUser, setMessage } from "./features/userSlice";
-import { forceLogout, resetApp } from "./Actions/globalActions";
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchUser, changeName } from './features/userSlice';
+import { increment } from './features/scoreSlice';
+import { resetAll } from '../Actions/globalActions';
 
-const App = () => {
+export default function App() {
   const dispatch = useDispatch();
+
   const user = useSelector((state) => state.user);
-  const settings = useSelector((state) => state.settings);
+
+  const score = useSelector((state) => state.score);
 
   return (
-    <div className="p-6 max-w-xl  mx-auto">
-      <h1>Redux learning app.</h1>
-      <button
-        className="bg-blue-600 text-white px-4 py-2 rounded mr-2" 
-        onClick={() => dispatch(fetchUser())}>Get user.</button>
-      <button className = "bg-yellow-600 text-white px-4 py-2 rounded mr-2" onClick={() => dispatch(setMessage("custom message set."))}>
-        Set message.
-      </button>
-      <button 
-        className="bg-gray-600 text-white px-4 py-2 rounded mr-2" 
-        onClick={() => dispatch(resetApp())}>
-        Reset App.
-      </button>
-      <button 
-        className="bg-red-600 text-white px-4 py-2 rounded mr-2" 
-        onClick={() => dispatch(forceLogout())}>
-        Force Logout.
-      </button>
+    <div className="p-6 bg-gray-100 min-h-screen text-center">
+      <h1 className="text-3xl font-bold mb-4">Redux Full Example</h1>
 
-      <pre className="bg-black text-white p-4 mt-4 rounded">{JSON.stringify({user, settings},null,2)}</pre>
+      <div className="space-y-4">
+        
+        <button 
+          onClick={() => dispatch(fetchUser())}
+          className="px-4 py-2 bg-blue-500 text-white rounded"
+        >
+          Fetch User (Thunk)
+        </button>
+
+        <div className="text-lg">
+          User: {user.name || 'No user'} <br />
+          Status: {user.status}
+        </div>
+
+        <button
+          onClick={() => dispatch(increment())}
+          className="px-4 py-2 bg-green-600 text-white rounded"
+        >
+          Increment Score
+        </button>
+
+        <div className="text-lg">
+          Score: {score.value}
+        </div>
+
+        <button
+          onClick={() => dispatch(resetAll())}
+          className="px-4 py-2 bg-red-600 text-white rounded"
+        >
+          Reset All (external action)
+        </button>
+      </div>
     </div>
   );
-};
-
-export default App;
+}
