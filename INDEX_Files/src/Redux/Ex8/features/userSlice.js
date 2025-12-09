@@ -1,72 +1,61 @@
-import {
-  createSlice,
-  createAsyncThunk,
-  isFulfilled,
-  isRejected,
-} from "@reduxjs/toolkit";
-import { forceLogout, resetApp } from "../Actions/globalActions";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { resetAll } from "./externalActions";
 
-export const fetchUser = createAsyncThunk("user/fetchUsers", async () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve({ name: "Jhon", age: 21 });
-    }, 1000);
-  });
+export const fetchUser = createAsyncThunk("user/fetchUser", async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users/1");
+  return await res.json();
 });
 
-export const userSlice = createSlice({
+const userSlice = createSlice({
   name: "user",
   initialState: {
-    data: null,
+    name: "",
     status: "idle",
-    message: "",
   },
-  reducers: {
-    setMessage: (state, action) => {
-      state.message = action.payload;
-    },
 
-    clearMessage: (state) => {
-      state.message = "";
+  reducers: {
+    changeName: (state, action) => {
+      state.name = action.payload;
     },
   },
+
   extraReducers: (builder) => {
     builder
+
       .addCase(fetchUser.pending, (state) => {
         state.status = "loading";
       })
+
       .addCase(fetchUser.fulfilled, (state, action) => {
-        state.status = "success";
-        state.data = action.payload;
+        state.status = "done";
+        state.name = action.payload.name;
       })
+
       .addCase(fetchUser.rejected, (state) => {
         state.status = "error";
       })
-      .addCase(resetApp, (state) => {
-        state.data = null;
+
+      // ---------------------------------------------------
+      // CROSS-SLICE REACTION TO external action
+      // ---------------------------------------------------
+      .addCase(resetAll, (state) => {
+        state.name = "";
         state.status = "idle";
-        state.message = "";
       })
-      .addCase(forceLogout, (state) => {
-        state.data = null;
-        state.message = "User Logged out by force";
-      })
-      .addMatcher(isFulfilled(fetchUser), (state) => {
-        state.message = "User loaded successfully..";
-      })
-      // add matcher actually matches the action type pattern, it consist of 3 functions: isPending, isFulfilled, isRejected
-      .addMatcher(isRejected(fetchUser), (state) => {
-        state.message = "laoding failed..!";
-      })
-      .addDefaultCase((state, action) => {
-        if (action.type.startsWith("user")) {
-          console.log("Unhandled action inside user Slice ->", action.type);
+
+      .addMatcher(
+        (action) => action.type.endsWith("/fulfilled"),
+        (state) => {
+          console.log("A fulfilled action happened!");
         }
-        // add default case is actually a catch all for any action that is not handled above, if any action is dispatched that is not handled above, this function will be called
+      )
+
+      .addDefaultCase((state, action) => {
+        // This will run if no case matched
+        // We keep it empty just for demonstration
       });
   },
 });
 
-export const {setMessage,clearMessage} = userSlice.actions;
-
+export const { changeName } = userSlice.actions;
 export default userSlice.reducer;
