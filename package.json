@@ -36,6 +36,7 @@
     "dev:RD-Ex6": "cd INDEX_Files/src/Redux/Ex6 && npm run dev",
     "dev:RD-Ex7": "cd INDEX_Files/src/Redux/Ex7 && npm run dev",
     "dev:RD-Ex8": "cd INDEX_Files/src/Redux/Ex8 && npm run dev",
+    "dev:RD-Ex9": "cd INDEX_Files/src/Redux/Ex9 && npm run dev",
 
     "build": "vite build",
     "lint": "eslint .",
