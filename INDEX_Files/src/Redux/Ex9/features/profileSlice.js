@@ -1,48 +1,89 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { logEverything, resetAll } from "../Actions/actoin";
+// profileSlice.js
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { resetAll, logEverything } from './externalActions';
+import { fetchTasks } from './taskSlice';
 
+// -------------------------
+// ASYNC: fetch profile
+// -------------------------
 export const fetchProfile = createAsyncThunk(
-  "profile/fechProfile",
+  'profile/fetchProfile',
   async () => {
-    const res = await fetch("https://jsonplaceholder.typicode.com/users/2");
-    const data = await res.json();
-    return data;
+    const res = await fetch('https://jsonplaceholder.typicode.com/users/2');
+    return await res.json();
   }
 );
 
 const profileSlice = createSlice({
-  name: "profile",
+  name: 'profile',
   initialState: {
-    name: "",
-    email: "",
-    status: "idle",
+    name: '',
+    email: '',
+    status: 'idle',
   },
+
   reducers: {
     updateProfileName: (state, action) => {
       state.name = action.payload;
     },
   },
+
   extraReducers: (builder) => {
     builder
+
+      // -----------------------------------
+      // THUNK lifecycle
+      // -----------------------------------
+      .addCase(fetchProfile.pending, (state) => {
+        state.status = 'loading';
+      })
+
       .addCase(fetchProfile.fulfilled, (state, action) => {
-        state.status = "done !";
+        state.status = 'done';
         state.name = action.payload.name;
         state.email = action.payload.email;
       })
-      .addCase(fetchProfile.pending, (state) => {
-        state.status = "loading !";
+
+      .addCase(fetchProfile.rejected, (state) => {
+        state.status = 'error';
       })
-      .addCase(fetchProfile.pending, (state) => {
-        state.status = "rejected !";
-      })
+
+      // ---------------------------------------------------------
+      // React to resetAll (external)
+      // ---------------------------------------------------------
       .addCase(resetAll, (state) => {
-        state.name = "";
-        state.email = "";
-        state.status = "idle";
+        state.name = '';
+        state.email = '';
+        state.status = 'idle';
       })
-      .addCase(logEverything, ());
+
+      // ---------------------------------------------------------
+      // React to another slice’s thunk: fetchTasks.fulfilled
+      // ---------------------------------------------------------
+      .addCase(fetchTasks.fulfilled, (state) => {
+        state.status = 'synced-with-tasks';
+      })
+
+      // ---------------------------------------------------------
+      // Matcher for fulfilled actions
+      // ---------------------------------------------------------
+      .addMatcher(
+        (action) => action.type.endsWith('/fulfilled'),
+        () => {
+          console.log('A global success action occurred');
+        }
+      )
+
+      // ---------------------------------------------------------
+      // addDefaultCase
+      // ---------------------------------------------------------
+      .addDefaultCase((state, action) => {
+        if (action.type === logEverything.type) {
+          console.log('Profile slice received logEverything');
+        }
+      });
   },
 });
 
-export const {updateProfileName} = profileSlice.actions;
+export const { updateProfileName } = profileSlice.actions;
 export default profileSlice.reducer;
