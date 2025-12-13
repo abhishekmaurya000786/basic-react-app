@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProfile, updateProfileName } from './features/profileSlice';
 import { fetchTasks, addTaskOptimistic } from './features/taskSlice';
-import { resetAll, logEverything } from './Actions/externalActions';
+import { resetAll, logEverything } from './Actions/action';
 
 export default function App() {
   const dispatch = useDispatch();

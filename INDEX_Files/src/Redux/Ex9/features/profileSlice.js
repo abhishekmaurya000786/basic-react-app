@@ -1,6 +1,6 @@
 // profileSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { resetAll, logEverything } from './externalActions';
+import { resetAll, logEverything } from '../Actions/action';
 import { fetchTasks } from './taskSlice';
 
 // -------------------------
