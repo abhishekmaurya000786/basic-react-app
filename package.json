@@ -38,6 +38,8 @@
     "dev:RD-Ex8": "cd INDEX_Files/src/Redux/Ex8 && npm run dev",
     "dev:RD-Ex9": "cd INDEX_Files/src/Redux/Ex9 && npm run dev",
 
+    "dev:RDA-Ex1": "cd INDEX_Files/src/Redux_API/Ex1 && npm run dev",
+
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
