@@ -6,7 +6,8 @@ export const store = configureStore({
     reducer : {
         counter: counterReducer,
 
-        [productApi.reducerpath]:productApi.reducer,
-
-    }
+        [productApi.reducerPath]: productApi.reducer,
+    },
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware().concat(productApi.middleware),
 });
