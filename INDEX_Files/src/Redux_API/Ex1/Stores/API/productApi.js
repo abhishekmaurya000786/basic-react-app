@@ -1,4 +1,4 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const productApi = createApi({
   reducerPath: "productApi",
@@ -11,9 +11,9 @@ export const productApi = createApi({
   endpoints: (builder) => ({
     getProducts: builder.query({
       query: () => "/products",
-      providesTags: ["Products"],
+      providesTags: ["Product"],
     }),
-    addproduct: builder.mutation({
+    addProduct: builder.mutation({
       query: (product) => ({
         url: "/products/add",
         method: "POST",
@@ -24,4 +24,4 @@ export const productApi = createApi({
   }),
 });
 
-export const { useGetProductsQuery, useAddproductMutation } = productApi;
+export const { useGetProductsQuery, useAddProductMutation } = productApi;

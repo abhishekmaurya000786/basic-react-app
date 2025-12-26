@@ -1,32 +1,38 @@
 import {
   useGetProductsQuery,
-  useAddproductMutation,
+  useAddProductMutation,
 } from "../Stores/API/productApi";
 
 const Product = () => {
-    const {data, isloading} = useGetProductsQuery();
-    const {addProduct} = useAddproductMutation();
+  const { data, isloading } = useGetProductsQuery();
+  const [addProduct] = useAddProductMutation();
 
-    if (isloading) return <p>Loading...</p>;
+  if (isloading) return <p>Loading...</p>;
 
   return (
-  <div>
-    <button
-        onClick={addProduct({
+    <div className="p-6">
+      <button
+        onClick={() =>
+          addProduct({
             title: "Apple",
             price: 150,
-        })}
+          })
+        }
         className="bg-black text-white px-4 py-2 rounded mb-4"
-    > Add Product</button>
+      >
+        {" "}
+        Add Product
+      </button>
 
-    <ul>
-        {data.products.slice(0.5).map(p=>(
-            <li
-            key={p.id}
-            >{p.title}:{p.price}</li>
+      <ul>
+        {data?.products?.slice(0, 5).map((p) => (
+          <li key={p.id}>
+            {p.title}:{p.price}
+          </li>
         ))}
-    </ul>
-  </div>);
+      </ul>
+    </div>
+  );
 };
 
 export default Product;
