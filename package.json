@@ -40,7 +40,6 @@
 
     "dev:RDA-Ex1": "cd INDEX_Files/src/Redux_API/Ex1 && npm run dev",
 
-    // "start": "node /home/abhishek/react-course/INDEX_Files/src/Nodes_Server/Ex1/app.js",
 
     "build": "vite build",
     "lint": "eslint .",
