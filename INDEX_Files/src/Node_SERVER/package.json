@@ -8,13 +8,14 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-
-    "start:Ex1": "cd /home/abhishek/react-course/INDEX_Files/src/Node_SERVER/Ex1 && node app.js",
-    "start:Ex2": "node /home/abhishek/react-course/INDEX_Files/src/Node_SERVER/Ex2/app.js",
-
-    "BOTH ARE CORRECT WAYS TO RUN THE SERVER ": "but first one is preferred to run the file",
-    
-    "start:Ex3": "cd /home/abhishek/react-course/INDEX_Files/src/Node_SERVER/Ex3 && node app.js"
-
+    "start:Ex1": "cd /home/abhishek/react-course/INDEX_Files/src/Node_SERVER/Ex1 && nodemon app.js",
+    "start:Ex2": "cd /home/abhishek/react-course/INDEX_Files/src/Node_SERVER/Ex2 && nodemon app.js",
+    "start:Exx": "node /home/abhishek/react-course/INDEX_Files/src/Node_SERVER/Ex2/app.js",
+    "// BOTH ARE CORRECT WAYS TO RUN THE SERVER ": "// but first one is preferred to run the file",
+    "start:Ex3": "cd /home/abhishek/react-course/INDEX_Files/src/Node_SERVER/Ex3 && nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11"
   }
 }
