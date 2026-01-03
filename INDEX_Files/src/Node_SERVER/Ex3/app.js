@@ -14,7 +14,7 @@ app.use(function(req,res,next){
 });
 
 app.get("/", function(req,res){
-    res.send("Hello World ABHISHEK jiiii    ok ji");
+    res.send("Hello World ABHISHEK.");
 });
 
 app.get("/about", function(req,res){
