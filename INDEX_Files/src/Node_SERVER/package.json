@@ -11,7 +11,9 @@
     "start:Ex1": "cd /home/abhishek/react-course/INDEX_Files/src/Node_SERVER/Ex1 && nodemon app.js",
     "start:Ex2": "cd /home/abhishek/react-course/INDEX_Files/src/Node_SERVER/Ex2 && nodemon app.js",
     "// BOTH ARE CORRECT WAYS TO RUN THE SERVER ": "// but first one is preferred to run the file",
-    "start:Ex3": "cd /home/abhishek/react-course/INDEX_Files/src/Node_SERVER/Ex3 && nodemon app.js"
+    "start:Ex3": "cd /home/abhishek/react-course/INDEX_Files/src/Node_SERVER/Ex3 && nodemon app.js",
+    "start:Ex4": "cd /home/abhishek/react-course/INDEX_Files/src/Node_SERVER/Ex4 && nodemon app.js",
+    "start:Ex5": "cd /home/abhishek/react-course/INDEX_Files/src/Node_SERVER/Ex5 && nodemon app.js"
   },
   "dependencies": {
     "cookie-parser": "^1.4.7",
